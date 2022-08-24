@@ -99,8 +99,8 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # SELinux
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Symbols
 TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
@@ -117,7 +117,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # Security patch level [ro.build.version.security_patch]
 VENDOR_SECURITY_PATCH := 2022-04-01
 
- AUDIO
+# AUDIO
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Android Verified Boot
